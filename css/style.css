@@ -1,0 +1,40 @@
+/*
+
+Palette
+	Very Dark Gray: #1a1c1b
+	Teal: #116466
+	Darker Tan: #D9B08C
+	Lighter Tan: #FFCB9A
+	Very Light Green: #D1E8E2 
+
+*/
+
+* {
+	margin: 0;
+	padding: 0; 
+}
+
+body {
+	background-color: #1a1c1b;
+	color: #D1E8E2;
+	font-family: 'Slabo 27px', serif;
+}
+
+#date-time-block {
+	border-color: #D1E8E2;
+	border-style: solid;
+	border-width: 6px;
+	font-size: 38px;
+	margin: 100px 20% 20%;
+	padding: 100px;
+
+	text-align: center;
+}
+
+#date-label-span {
+	
+}
+
+#time-label-span {
+	
+}
