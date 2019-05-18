@@ -4,7 +4,9 @@ var timeSpan = document.getElementById('time-span');
 
 var today = new Date();
 var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
-var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+var time = ('0' + today.getHours()).slice(-2) +
+	":" + ('0' + today.getMinutes()).slice(-2) +
+	":" + ('0' + today.getSeconds()).slice(-2);
 var dateTime = date + ' ' + time;
 
 /* Updates date on web page. */
@@ -16,7 +18,9 @@ timeSpan.innerHTML = time;
 /* Function to update time */
 function updateTime() {
 	today = new Date();
-	time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+	time = ('0' + today.getHours()).slice(-2) +
+		":" + ('0' + today.getMinutes()).slice(-2) +
+		":" + ('0' + today.getSeconds()).slice(-2);
 	timeSpan.innerHTML = time;
 }
 
