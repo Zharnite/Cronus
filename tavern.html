@@ -20,15 +20,39 @@
 	<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
 
-	<!--  Temporary Style Code for Canvas -->
+	<!-- Temporary Style -->
 	<style type="text/css">
-		canvas {
-			border: 1px solid white;
+		#tavern-block {
+			text-align: center;
+		}
+		#bartender-block {
+
+		}
+		#bartender-canvas {
+			width: 200px;
+			height: 200px
+			image-rendering: -moz-crisp-edges;
+			image-rendering: -webkit-crisp-edges;
+			image-rendering: pixelated;
+			image-rendering: crisp-edges;;
+		}
+		#bartender-text-block {
+			margin-left: 20%;
+			margin-right: 20%;
+			min-width: 300px;
+			border: solid 2px white;
+		}
+		button {
+			border: solid 2px white;
+			padding: 0px 2px 0px 2px;
+			margin: 3px 0px 3px 0px;
+			color: #D9B08C;
+			background-color: black;
 		}
 	</style>
 
 </head>
-<body onload="draw();">
+<body>
 	<!-- Navigation Bar Start -->
 	<nav class="navbar navbar-inverse" id="navbar-id">
 		<div class="container-fluid">
@@ -81,24 +105,45 @@
 	</nav>
 	<!-- Navigation Bar End -->
 
-	<canvas id="theCanvas" width="200" height="100"></canvas>
+	<!-- Tavern Block -->
+	<div id="tavern-block">
+		<div id="bartender-block">
+			<canvas id="bartender-canvas" width="32" height="32"></canvas>
+		</div>
+		<div id="bartender-text-block">
+			<span>[Mister Bunny-Man]: </span>
+			<span id="bartender-quote">"Hopefully I can be redrawn to look prettier."</span>
+		</div>
+		<div id="bartender-interact-block">
+			<button id="bartender-talk-button">Talk</button>
+			
+		</div>
+	</div>
 
-	<!-- Temporary location for JS canvas script -->
+	<!-- Temporary JavaScript -->
+	<!-- Canvas Retina -->
 	<script type="text/javascript">
-		function draw() {
-			var canvas = document.getElementById('theCanvas');
-			if(canvas.getContext) {
-				var ctx = canvas.getContext('2d');
+		var canvas = document.getElementById('bartender-canvas');
+		var ctx = canvas.getContext('2d');
 
-				var tavernBG = new Image();
-				tavern.src = 'img/tavernBG';
-
-				img.onload = function() {
-					ctx.drawImage(img, 0, 0);
-				}
-			}
+		var image = new Image();
+		image.onload = function () {
+			ctx.drawImage(image, 0, 0);
 		}
-		
+		image.src = 'img/bunnyman.png';
+
+	</script>
+
+	<!-- Talk -->
+	<script type="text/javascript">
+		var talkBtn = document.getElementById('bartender-talk-button');
+		var dialogue = ['Hello there.',
+			 'It is... lovely weather we are having. I hope the weather continues.',
+			 'The area is secure.'];
+		var dialogueCount = 0;
+
+		talkBtn.addEventListener('click', nextDialogue());
+
 	</script>
 
 
