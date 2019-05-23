@@ -1,0 +1,27 @@
+#tavern-block {
+	text-align: center;
+}
+#bartender-block {
+
+}
+#bartender-canvas {
+	width: 200px;
+	height: 200px
+	image-rendering: -moz-crisp-edges;
+	image-rendering: -webkit-crisp-edges;
+	image-rendering: pixelated;
+	image-rendering: crisp-edges;;
+}
+#bartender-text-block {
+	margin-left: 20%;
+	margin-right: 20%;
+	min-width: 300px;
+	border: solid 2px white;
+}
+button {
+	border: solid 2px white;
+	padding: 0px 2px 0px 2px;
+	margin: 3px 0px 3px 0px;
+	color: #D9B08C;
+	background-color: black;
+}
