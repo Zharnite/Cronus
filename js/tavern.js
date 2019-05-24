@@ -13,12 +13,12 @@ image.src = 'img/bunnyman.png';
 var quote = document.getElementById('bartender-quote');
 var talkBtn = document.getElementById('bartender-talk-button');
 var dialogue = ['Hello there.',
-	 'It is... lovely weather we are having.',
-	 'HAA!',
-	 'I hope the weather stays this mild...',
-	 'If the weather continues...',
-	 'We are in for a luvely surprise.',
-	 'The area is secure.'];
+	 'Did you know puddles are floor mirrors?',
+	 'I once rolled around in grass that smelled like the beach.',
+	 'And then I saw a yellow sign about pesticide being sprayed this morning.',
+	 'Hey, you\'re cute.',
+	 'Would you like to get some carrot juice some time?',
+	 'No? OK. I\'ll see you around.'];
 var dialogueCount = 0;
 
 talkBtn.addEventListener('click', nextDialogue);
