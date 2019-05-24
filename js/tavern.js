@@ -25,6 +25,6 @@ talkBtn.addEventListener('click', nextDialogue);
 
 function nextDialogue() {
 	quote.innerHTML = "\"" + dialogue[dialogueCount] + "\"";
-	dialogueCount = (dialogueCount++) % (dialogue.length - 1);
-	console.log(dialogue.length);
+	dialogueCount++;
+	dialogueCount = dialogueCount % dialogue.length;
 }
