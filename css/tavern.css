@@ -1,8 +1,14 @@
 #tavern-block {
 	text-align: center;
+	border: solid 2px white;
+	width: 100%;
+	min-width: 200px;
+	padding: 1px;
+	margin: 1px;
+	position: relative;
 }
 #bartender-block {
-
+	font-size: 16px;
 }
 #bartender-canvas {
 	width: 200px;
@@ -12,16 +18,21 @@
 	image-rendering: pixelated;
 	image-rendering: crisp-edges;;
 }
-#bartender-text-block {
-	margin-left: 20%;
-	margin-right: 20%;
-	min-width: 300px;
+#bartender-interact-block {
 	border: solid 2px white;
 }
-button {
+#bartender-text-block {
+	position: relative;
+	left: 1em;
+	right: 1em;
+	min-width: 200px;
+	border: solid 2px white;
+}
+.bartender-button {
 	border: solid 2px white;
 	padding: 0px 2px 0px 2px;
 	margin: 3px 0px 3px 0px;
 	color: #D9B08C;
 	background-color: black;
+	min-width: 80px;
 }
