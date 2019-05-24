@@ -13,13 +13,18 @@ image.src = 'img/bunnyman.png';
 var quote = document.getElementById('bartender-quote');
 var talkBtn = document.getElementById('bartender-talk-button');
 var dialogue = ['Hello there.',
-	 'It is... lovely weather we are having. I hope the weather continues.',
+	 'It is... lovely weather we are having.',
+	 'HAA!',
+	 'I hope the weather stays this mild...',
+	 'If the weather continues...',
+	 'We are in for a luvely surprise.',
 	 'The area is secure.'];
 var dialogueCount = 0;
 
-talkBtn.addEventListener('click', nextDialogue());
+talkBtn.addEventListener('click', nextDialogue);
 
 function nextDialogue() {
 	quote.innerHTML = "\"" + dialogue[dialogueCount] + "\"";
-	dialogueCount = ((dialogueCount++) % (dialogue.length - 1));
+	dialogueCount = (dialogueCount++) % (dialogue.length - 1);
+	console.log(dialogue.length);
 }
