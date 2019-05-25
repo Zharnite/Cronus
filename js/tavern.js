@@ -19,6 +19,7 @@ var dialogue = ['Hello there.',
 	 'Hey, you\'re cute.',
 	 'Would you like to get some carrot juice some time?',
 	 'No? OK. I\'ll see you around.'];
+	 
 var dialogueCount = 0;
 
 talkBtn.addEventListener('click', nextDialogue);

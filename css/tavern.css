@@ -1,11 +1,9 @@
 #tavern-block {
 	text-align: center;
-	border: solid 2px white;
 	width: 100%;
 	min-width: 200px;
 	padding: 1px;
 	margin: 1px;
-	position: relative;
 }
 #bartender-block {
 	font-size: 16px;
@@ -19,14 +17,25 @@
 	image-rendering: crisp-edges;;
 }
 #bartender-interact-block {
-	border: solid 2px white;
+
 }
 #bartender-text-block {
-	position: relative;
-	left: 1em;
-	right: 1em;
+	min-height: 120px;
+	max-height: 120px;
+	display: inline-block;
+}
+#bartender-text-block-inner {
+	padding-left: 1em;
+	padding-right: 1em;
 	min-width: 200px;
+	max-width: 70%;
+	max-height: 100px;
+	overflow: auto;
 	border: solid 2px white;
+	display: inline-block;
+}
+#bartender-text-block-outer {
+
 }
 .bartender-button {
 	border: solid 2px white;
@@ -36,3 +45,17 @@
 	background-color: black;
 	min-width: 80px;
 }
+.column {
+	flex: 1;
+	margin: 2px;
+	padding: 10px;
+	&:first-child { margin-left: 0; }
+	&:last-child { margin-right: 0; }
+}
+.columns {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	margin: 5px 0;
+}
+
